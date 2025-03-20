@@ -13,16 +13,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const lightboxDesc = document.getElementById("lightbox-desc");
   const closeBtn = document.querySelector(".close");
 
+  // Selecting all images inside .image-card
   document.querySelectorAll(".image-card").forEach((card) => {
     card.addEventListener("click", () => {
-      const img = card.querySelector(".gallery-item");
-      const desc = card.querySelector(".image-description").textContent;
-      lightbox.style.display = "flex";
-      lightboxImg.src = img.dataset.src;
-      lightboxDesc.textContent = desc;
+      const img = card.querySelector(".gallery-item");  // Get the image inside the clicked card
+      const desc = card.querySelector(".image-description").textContent;  // Get the description
+
+      if (img) {
+        lightboxImg.src = img.getAttribute("data-src"); // Use getAttribute instead of dataset
+        lightboxDesc.textContent = desc;  // Set the description
+        lightbox.style.display = "flex";  // Show the lightbox
+      }
     });
   });
 
+  // Close the lightbox when clicking the close button or outside the image
   closeBtn.addEventListener("click", () => {
     lightbox.style.display = "none";
   });
