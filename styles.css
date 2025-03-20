@@ -77,9 +77,19 @@ header {
   transition: background 0.3s ease-in-out;
 }
 
-.location{
-  display: grid;
-  place-items: center;
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.location iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border: 0;
 }
 .cta-button:hover {
   background: #d18d00;
@@ -112,7 +122,12 @@ footer {
   .nav-links.active {
     display: flex;
   }
-}.about, .products, .contact {
+
+  .location iframe {
+    height: 250px;
+  }
+}
+.about, .products, .contact {
   padding: 2rem;
   text-align: center;
   background: #f4f4f4;
@@ -140,3 +155,6 @@ footer {
 .contact a:hover {
   text-decoration: underline;
 }
+
+
+
