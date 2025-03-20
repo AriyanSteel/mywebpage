@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image Gallery</title>
-  <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+
+  <header>
     <nav class="navbar">
       <div class="logo">SteelFurniCo</div>
       <div class="hamburger" id="hamburger">
@@ -25,25 +26,19 @@
   </header>
 
   <main>
-    <section id="gallery" class="gallery">
+    <section class="gallery">
       <h2>Image Gallery</h2>
       <div class="gallery-container">
-        <!-- Add 70+ images -->
-        <img data-src="Ralling1.jpg" alt="Image 1" class="gallery-item lazy">
+        <img data-src="images/img1.jpg" alt="Image 1" class="gallery-item lazy">
         <img data-src="images/img2.jpg" alt="Image 2" class="gallery-item lazy">
         <img data-src="images/img3.jpg" alt="Image 3" class="gallery-item lazy">
-        <img data-src="images/img4.jpg" alt="Image 4" class="gallery-item lazy">
-        <img data-src="images/img5.jpg" alt="Image 5" class="gallery-item lazy">
-        <img data-src="images/img6.jpg" alt="Image 6" class="gallery-item lazy">
-        <!-- Add more images following the same pattern -->
-      </div>
-
-      <!-- Lightbox for image preview -->
-      <div class="lightbox" id="lightbox">
-        <span class="close">&times;</span>
-        <img class="lightbox-img" id="lightbox-img" src="" alt="">
       </div>
     </section>
+
+    <div class="lightbox" id="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    </div>
   </main>
 
   <footer>
@@ -51,6 +46,7 @@
   </footer>
 
   <script defer src="script.js"></script>
-   <script defer src="product.js"></script> 
+   <script defer src="product.js"></script>
+
 </body>
 </html>
