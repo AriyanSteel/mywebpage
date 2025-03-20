@@ -35,10 +35,12 @@ header {
   font-weight: bold;
 }
 
+/* Hamburger Menu */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  z-index: 1100;
 }
 
 .hamburger span {
@@ -49,7 +51,6 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
-/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -85,6 +86,7 @@ header {
     width: 100%;
     background: #444;
     text-align: center;
+    transition: all 0.3s ease-in-out;
   }
 
   .nav-links.active {
@@ -94,6 +96,19 @@ header {
 
   .nav-links li {
     margin: 1rem 0;
+  }
+
+  /* Hamburger Animation */
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 }
 
@@ -187,7 +202,6 @@ header {
   cursor: pointer;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
