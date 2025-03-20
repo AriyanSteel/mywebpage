@@ -77,6 +77,10 @@ header {
   transition: background 0.3s ease-in-out;
 }
 
+.location{
+  display: grid;
+  place-items: center;
+}
 .cta-button:hover {
   background: #d18d00;
 }
